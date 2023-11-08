@@ -30,6 +30,24 @@ Modify the properties of the CHN project [Configuration properties] -> [linker] 
 Dight click on CHN -> Project only -> build only CHN ==> this will create CHN.dll inside ...\MultiLanguage\Debug\CNH.dll
 
 
+Now add variavle [HINSTANCE m_hLangDll;] inside MultiLanguage.h
+then go inside MultiLanguage.cpp  and inside function BOOL CMultiLanguageApp::InitInstance(){}
+
+write this part of code
+
+///
+	m_hLangDll = ::LoadLibraryA("CHN.dll");
+	if (m_hLangDll != NULL) {
+		AfxSetResourceHandle(m_hLangDll);
+	}
+	else {
+		TRACE("\ncan't load chinise\n");
+	}
+
+///
+
+This code will load the chinise language instead of language. Now you can use if else condition as you want to coltroll different language.
+
 
 
 
