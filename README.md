@@ -3,6 +3,8 @@
 
 First, create an `MFC app` ` dialog-based` project.
 Follow the steps shown in the `1-7` images then click finish. 
+<br>
+
 ![...](image/1.PNG)
 <br>
 `                                               fig: Image 1                                              `
