@@ -1,8 +1,8 @@
-# How to Crete MFC Multi Language Support application
+# How to Create MFC Multi-Language Support application
 
 
-First cretate `MFC app` `dialog based` project.
-Follow the steps shown in `1-7` images then click finish. 
+First, create an `MFC app` ` dialog-based` project.
+Follow the steps shown in the `1-7` images then click finish. 
 ![...](image/1.PNG)
 <br>
 `                                               fig: Image 1                                              `
@@ -40,7 +40,7 @@ Follow the steps shown in `1-7` images then click finish.
 
 `                                               fig: Image 7                                              `
 
-A project like image `figure- 8` will be created.
+A project like the image of `figure- 8` will be created.
 ![...](image/8.PNG)
 <br>
 
@@ -49,9 +49,9 @@ A project like image `figure- 8` will be created.
 
 
 
-Currently all the resource are in english version, Now we will create the chinise version of it. Do These following steps:
+Currently, all the resources are in English version, Now we will create the Chinese version of it. Do The following steps:
 
-	solution -> rght click -> Add -> New Project -> MFC DLL -> give project name(In my case I choose CHN) -> Ok
+	solution -> right click -> Add -> New Project -> MFC DLL -> give project name(In my case I choose CHN) -> Ok
 
 Now the solution explorer will look like this - `figure 9`
 <br>
@@ -60,15 +60,15 @@ Now the solution explorer will look like this - `figure 9`
 
 `                                               fig: Image 9                                              `
 
-Now remove `CHN.rc` and `CHN.rc2` from `resource file`. then remove `resource.h` from `heaeder file` of CHN.(delete comptelely)
+Now remove `CHN.rc` and `CHN.rc2` from `resource file`. then remove `resource.h` from `header file` of CHN.(delete completely)
 
-go to `x:\x\x\MultiLanguage\MultiLanguage` folder. Copy `MultiLanguage.rc` and `resource.h` and paste inside `x:\x\x\MultiLanguage\CHN` folder.
+go to `x:\x\x\MultiLanguage\MultiLanguage` folder. Copy `MultiLanguage.rc` and `resource.h` and paste them inside `x:\x\MultiLanguage\CHN` folder.
 
-Now go to `x:\x\x\MultiLanguage\MultiLanguage\res` folder and copy all the file and then paste them inside `x:\x\x\MultiLanguage\CHN\res` folder.
+Now go to `x:\x\MultiLanguage\MultiLanguage\res` folder and copy all the files and then paste them inside `x:\x\MultiLanguage\CHN\res` folder.
 
-Now add all the copied file insise `CHN` folder. To add right click on CHN then `add -> existing item` 
+Now add all the copied files inside the `CHN` folder. To add right click on CHN then `add -> existing item` 
 
-Now open the resource of CHN project and translate the text into chinise(I use google translate to translate). Figure 10 shows a resource after tranalating the text inside it.
+Now open the resource of the CHN project and translate the text into Chinese (I use Google Translate to translate). Figure 10 shows a resource after translating the text inside it.
 <br>
 ![...](image/15.PNG)
 <br>
@@ -78,7 +78,7 @@ Now open the resource of CHN project and translate the text into chinise(I use g
 Modify the properties of the CHN project `[Configuration properties] -> [linker] -> [Advanced] -> "No Entry Point" is changed to "Yes(/NOENTRY)"` - figure 16
 
 
-Right click on `CHN` Then `Project only -> build only CHN` ==> this will create CHN.dll inside `x:\x\x\MultiLanguage\Debug\CNH.dll`
+Right-click on `CHN` Then `Project only -> build only CHN` ==> This will create CHN.dll inside `x:\x\x\MultiLanguage\Debug\CNH.dll`
 
 
 Now add a HINSTANCE type variavle inside `MultiLanguage.h`
@@ -86,7 +86,7 @@ Now add a HINSTANCE type variavle inside `MultiLanguage.h`
 	[HINSTANCE m_hLangDll;]
 
 
-then go inside MultiLanguage.cpp  and inside function `BOOL CMultiLanguageApp::InitInstance(){}` write this part of code. This part of code will load Chinise language instead of English.
+then go inside MultiLanguage.cpp  and inside function `BOOL CMultiLanguageApp::InitInstance(){}` write this part of the code. This part of the code will load the Chinese language instead of English.
 
 
 	m_hLangDll = ::LoadLibraryA("CHN.dll");
@@ -100,7 +100,7 @@ then go inside MultiLanguage.cpp  and inside function `BOOL CMultiLanguageApp::I
 
 
 
-This code will load the chinise language instead of English language. Now you can use if else condition as you want to coltroll different language. Cretete different dll for different language and add logic when to load which dll.
+This code will load the Chinese language instead of the English language. Now you can use the if else condition as you want to control different languages. Create different dll for different languages and add logic when to load which dll.
 
 
 
