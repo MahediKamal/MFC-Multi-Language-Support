@@ -1,6 +1,7 @@
-# MFC Multi Language Support
+# How to Crete MFC Multi Language Support application
 
-cretate `MFC app` `dialog based` project.
+
+First cretate `MFC app` `dialog based` project.
 Follow the steps shown in `1-7` images then click finish. 
 ![...](https://github.com/MahediKamal/MFC-Multi-Language-Support/blob/4f500b31316241842ae38d9fc59d929cea3e2e8c/image/1.PNG)
 </br>
@@ -65,7 +66,7 @@ go to `x:\x\x\MultiLanguage\MultiLanguage` folder. Copy `MultiLanguage.rc` and `
 
 Now go to `x:\x\x\MultiLanguage\MultiLanguage\res` folder and copy all the file and then paste them inside `x:\x\x\MultiLanguage\CHN\res` folder.
 
-Now add all the copied file insise `CHN`. To add right click on CHN then `add -> existing item` 
+Now add all the copied file insise `CHN` folder. To add right click on CHN then `add -> existing item` 
 
 Now opem the resource of CHN project and translate the text into chinise(I use google translate to translate) --> figure 10
 </br>
@@ -74,7 +75,7 @@ Now opem the resource of CHN project and translate the text into chinise(I use g
 
 `                                                           fig: Image 10                                                          `
 
-Modify the properties of the CHN project [Configuration properties] -> [linker] -> [Advanced] -> "No Entry Point" is changed to "Yes(/NOENTRY)" - figure 16
+Modify the properties of the CHN project `[Configuration properties] -> [linker] -> [Advanced] -> "No Entry Point" is changed to "Yes(/NOENTRY)"` - figure 16
 
 
 Right click on `CHN` Then `Project only -> build only CHN` ==> this will create CHN.dll inside `x:\x\x\MultiLanguage\Debug\CNH.dll`
@@ -85,7 +86,7 @@ Now add a HINSTANCE type variavle inside `MultiLanguage.h`
 	[HINSTANCE m_hLangDll;]
 
 
-then go inside MultiLanguage.cpp  and inside function `BOOL CMultiLanguageApp::InitInstance(){}` write this part of code
+then go inside MultiLanguage.cpp  and inside function `BOOL CMultiLanguageApp::InitInstance(){}` write this part of code. This part of code will load Chinise language instead of English.
 
 
 	m_hLangDll = ::LoadLibraryA("CHN.dll");
