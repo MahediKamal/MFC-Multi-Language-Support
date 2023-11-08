@@ -1,1 +1,1 @@
-# MFC-Multi-Language-Support
+# MFC Multi Language Support
