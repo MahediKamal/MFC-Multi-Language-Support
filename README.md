@@ -4,45 +4,45 @@
 First cretate `MFC app` `dialog based` project.
 Follow the steps shown in `1-7` images then click finish. 
 ![...](image/1.PNG)
-</br>
+<br>
 `                                               fig: Image 1                                              `
-</br></br></br>
+<br><br><br>
 ![...](image/2.PNG)
-</br>
+<br>
 `                                               fig: Image 2                                              `
 
-</br></br></br>
+<br><br><br>
 ![...](image/3.PNG)
-</br>
+<br>
 `                                               fig: Image 3                                              `
 
-</br></br></br>
+<br><br><br>
 ![...](image/4.PNG)
-</br>
+<br>
 
 `                                               fig: Image 4                                              `
 
-</br></br></br>
-![...](5.PNG)
-</br>
+<br><br><br>
+![...](image/5.PNG)
+<br>
 
 `                                               fig: Image 5                                              `
 
-</br></br></br>
-![...](6.PNG)
-</br>
+<br><br><br>
+![...](image/6.PNG)
+<br>
 
 `                                               fig: Image 6                                              `
 
-</br></br></br>
+<br><br><br>
 ![...](image/7.PNG)
-</br>
+<br>
 
 `                                               fig: Image 7                                              `
 
 A project like image `figure- 8` will be created.
 ![...](image/8.PNG)
-</br>
+<br>
 
 `                                               fig: Image 8                                              `
 
@@ -54,9 +54,9 @@ Currently all the resource are in english version, Now we will create the chinis
 	solution -> rght click -> Add -> New Project -> MFC DLL -> give project name(In my case I choose CHN) -> Ok
 
 Now the solution explorer will look like this - `figure 9`
-</br>
+<br>
 ![...](image/14.PNG)
-</br>
+<br>
 
 `                                               fig: Image 9                                              `
 
@@ -69,9 +69,9 @@ Now go to `x:\x\x\MultiLanguage\MultiLanguage\res` folder and copy all the file 
 Now add all the copied file insise `CHN` folder. To add right click on CHN then `add -> existing item` 
 
 Now open the resource of CHN project and translate the text into chinise(I use google translate to translate). Figure 10 shows a resource after tranalating the text inside it.
-</br>
+<br>
 ![...](image/15.PNG)
-</br>
+<br>
 
 `                                               fig: Image 10                                              `
 
