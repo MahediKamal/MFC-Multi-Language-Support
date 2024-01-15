@@ -104,6 +104,7 @@ then go inside MultiLanguage.cpp  and inside function `BOOL CMultiLanguageApp::I
 
 This code will load the Chinese language instead of the English language. Now you can use the if else condition as you want to control different languages. Create different dll for different languages and add logic when to load which dll.
 
-
-
+### Note:
+	- You might need to add the language in your OS, if it shows '?' insted of every character
+ 	- You might need to change the property of your dialog into the prefered language if it shows garbage characters
 
